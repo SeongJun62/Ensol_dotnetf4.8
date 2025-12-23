@@ -35,8 +35,10 @@ namespace dotnetfsample.Controllers
         [Route("Sample_Receive")]
         public IHttpActionResult SampleReceive([FromBody] LegacyDto request)
         {
-            // 수신 JSON 로깅은 Web API 2에서는 필터/핸들러로 처리하는게 일반적(아래에서 대안 설명)
-
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             ErpDto response;
             try
             {

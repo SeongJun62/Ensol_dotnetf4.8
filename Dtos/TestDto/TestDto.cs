@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+
 
 using dotnetfsample.Converters;
 
@@ -46,9 +48,9 @@ namespace dotnetfsample.Dtos.TestDto
     {
         // 항목명 맵핑 (ERP : IV_BUKRS  ->  Legacy : BUKRS)
         [JsonProperty("IV_BUKRS")]
+        [Required]
         public string BUKRS { get; set; }
-
-        // 필요 항목 (항목이 없더라도 항목 유지하고 값은 NULL)
+        
         public string EXT_FIELD { get; set; }
 
 
