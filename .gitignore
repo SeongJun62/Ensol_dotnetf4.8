@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# User-specific
+*.user
+*.suo
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Packages
+packages/
+
+# IIS Express
+.iis/
+
+# Environment files
+*.env
