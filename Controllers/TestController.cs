@@ -110,7 +110,7 @@ namespace dotnetfsample.Controllers
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Trace.TraceError("Sync Request Failed to {0} : {1}", _SAPPOURL, ex);
+                _logger.Error($"[RESPONSE] Sync Request Failed to {_SAPPOURL}", ex);
                 return InternalServerError(ex);
             }
         }
